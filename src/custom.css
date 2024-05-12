@@ -1,0 +1,145 @@
+#root1 {
+  background: #3f6d83;
+}
+
+.main {
+  min-height: 30rem; /* Use min-height for responsiveness */
+  background: #1a4a60;
+  max-width: 800px; /* Use max-width for responsiveness */
+  margin: 30px auto; /* Center horizontally */
+  display: flex;
+  border-radius: 15px;
+}
+
+.right {
+  background: white;
+  color: black;
+  max-width: 800px; /* Use max-width for responsiveness */
+  margin-left: 135px;
+  border: 1px solid black;
+  border-radius: 15px;
+}
+
+.text-img {
+  margin-top: 13px;
+  margin-left: 6px;
+}
+
+#image1 {
+  height: 40px;
+}
+
+.text {
+  color: rgb(209, 209, 209);
+  font-size: 13px;
+  margin-left: 6px;
+}
+
+.gif {
+  background: url("C:\kunal personal code\personal\web develpment\ReactLearn\signPG\Sign-PG\Animation - 1711334621803.gif");
+}
+
+.CreateAccount {
+  margin-top: 40px;
+  margin-left: 60px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.button-options {
+  display: flex;
+  gap: 20px; /* Decrease the gap for responsiveness */
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#google,
+#facebook {
+  height: 18px;
+}
+
+.icon {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  height: 2rem;
+  background: white;
+  border-color: rgb(29, 29, 29);
+  width: 11rem;
+  border-radius: 5px;
+  border: 1px solid rgb(83, 83, 83);
+  cursor: pointer;
+}
+
+.or {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.inputtext {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 30rem;
+  margin: auto auto;
+}
+
+.inputText {
+  margin-top: 15px;
+  height: 1.5rem;
+  width: 20rem;
+}
+
+.summitBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#summitBtn {
+  height: 3rem;
+  width: 18rem;
+  background: #1a4a60;
+  color: white;
+  border: 1px solid #012333;
+  cursor: pointer;
+}
+
+.haveAccount {
+  text-align: center; /* Align the text center for responsiveness */
+}
+
+#LogIn {
+  font-weight: bold;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .right {
+    margin-left: 0; /* Remove left margin */
+    border-radius: 0; /* Remove border radius */
+  }
+
+  .button-options {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Decrease the gap */
+  }
+
+  .inputText {
+    width: calc(100% - 40px); /* Adjust input width */
+  }
+
+  .haveAccount {
+    margin-left: 0; /* Remove left margin */
+  }
+}
