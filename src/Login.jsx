@@ -36,14 +36,14 @@ function Login() {
   return (
     <div className="main">
         <div className="text-img">
-          <img id="image1" src="./Group 3.png" alt="" />
-          <p className="text">Getting Started With VR Creation</p>
+          <img id="image1" src="" alt="" />
+          <p className="text">Getting Started With VR Creation knal</p>
           {/* <img className='image2' src="./snimg.png" alt="" /> */}
           <div className="gif"></div>
         </div>
 
         <div className="right">
-          <p className="CreateAccount">Create Account</p>
+          <p className="CreateAccount">Create Your Account</p>
           <div className="button-options">
             <button className="icon">
               <img id="google" src="./google.png" alt="" /> Signup with Google
