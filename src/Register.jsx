@@ -1,19 +1,20 @@
 import React from "react";
 import { useState } from "react";
 // import { NavLink } from "react-router-dom";
-import { NavLink, useNavigate } from 'react-router-dom';
-import {  createUserWithEmailAndPassword  } from 'firebase/auth';
-import { auth } from './firebase';
+import { NavLink, useNavigate } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../src/firebase";
 // import Login from "./Login"/;
 import "./custom.css";
 
 function Register() {
+  console.log("hello");
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
     password: "",
   });
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleChange = (event) => {
     const name = event.target.name;
     const val = event.target.value;
@@ -23,19 +24,19 @@ function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await createUserWithEmailAndPassword(auth, inputs.email, inputs.password)
-        .then((userCredential) => {
-            // Signed in
-            const user = userCredential.user;
-            console.log(user);
-            navigate("/link")
-            // ...
-        })
-        .catch((error) => {
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            console.log(errorCode, errorMessage);
-            // ..
-        });
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
+        navigate("/link");
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
     alert(inputs);
     console.log(inputs);
   };
@@ -95,11 +96,7 @@ function Register() {
           <p className="haveAccount">
             Already have an account?{" "}
             <span id="LogIn ">
-              <NavLink
-                to="/link"
-              >
-                Log In
-              </NavLink>
+              <NavLink to="/link">Log In</NavLink>
             </span>
           </p>
         </div>
@@ -109,4 +106,3 @@ function Register() {
 }
 
 export default Register;
- 
